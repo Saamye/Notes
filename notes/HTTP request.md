@@ -8,4 +8,3 @@
 ## Drawbacks:
 - **complicated and repetitive code**
 - need to handle success and error manually
-- not very readable or beginner friendly
