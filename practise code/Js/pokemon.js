@@ -1,21 +1,21 @@
 async function getPokemon(pokemonName) {
     try {
         
-        //checking if the user entered a string
-        if (typeof pokemonName === "string") {
+        if (typeof pokemonName === "string") { //checking if the user entered a string
             
-            //trying to fetch the API based on the input
-            const URL = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}`);
+            const URL = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}`); //trying to fetch the API based on the input
 
-            //to check if the response was successfull using the response.ok functionality
-            if(!response.ok) { throw new Error("Was not able to Fetch the API!!!")}
-          
-              
-        } else { throw new Error("Wrong input!") }
+            if(!response.ok) throw new Error(response.status); //to check if the response was successfull using the response.ok functionality
 
+            const pokemon = await response.json() //retrive info if await was successfull
+            console.log(pokemon); 
+                
+        } else throw new Error("Wrong input!");
 
     } catch (error) {
+
         console.error("Could not connect to the server!..", error)
+    
     }
 }
 
