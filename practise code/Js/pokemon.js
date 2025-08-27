@@ -8,7 +8,14 @@ async function getPokemon(pokemonName) {
             if(!response.ok) throw new Error(response.status); //to check if the response was successfull using the response.ok functionality
 
             const pokemon = await response.json() //retrive info if await was successfull
-            console.log(pokemon); 
+            console.log(pokemon);
+
+            
+            //store the properties from the retrived object 
+            const name = pokemon.name;
+            const height = pokemon.height;
+            const weight = pokemon.weight;
+            const image = pokemon.front_default;
                 
         } else throw new Error("Wrong input!");
 
