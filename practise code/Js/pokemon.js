@@ -11,11 +11,14 @@ async function getPokemon(pokemonName) {
             console.log(pokemon);
 
             
-            //store the properties from the retrived object 
+            //store the properties from the retrived object  
             const name = pokemon.name;
             const height = pokemon.height;
             const weight = pokemon.weight;
-            const image = pokemon.front_default;
+            const image = pokemon.sprites.front_default;
+
+            
+            const typesOfPokemon = pokemon.types.map((element) => element.type.name);
                 
         } else throw new Error("Wrong input!");
 
