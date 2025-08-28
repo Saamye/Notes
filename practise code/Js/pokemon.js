@@ -17,9 +17,20 @@ async function getPokemon(pokemonName) {
             const weight = pokemon.weight;
             const image = pokemon.sprites.front_default;
 
-            
+
+
             const typesOfPokemon = pokemon.types.map((element) => element.type.name);
                 
+            const sound = Object.entries(pokemon.cries).map((key, value) => {
+                {
+                    soundType: key,
+                    sound: value
+                }
+            })
+
+
+
+
         } else throw new Error("Wrong input!");
 
     } catch (error) {
