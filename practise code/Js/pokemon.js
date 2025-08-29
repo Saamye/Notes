@@ -23,8 +23,7 @@ async function getPokemon(pokemonName) {
                 
             const sound = Object.entries(pokemon.cries).map((key, value) => {
                 {
-                    soundType: key,
-                    sound: value
+                    
                 }
             })
 
