@@ -32,4 +32,3 @@ Filtering & Searching: Use the search box to filter displayed users by Location.
 More User Details: Cards show name, age, email, location, and phone number.
 Theme Toggle: Switch between light and dark modes with the toggle.
 Use CSS: Link a style.css file to your JS file, and style it as you wish - Get creative!
--- Api https://randomuser.me/api/?results
